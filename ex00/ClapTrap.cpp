@@ -6,7 +6,7 @@
 /*   By: akyoshid <akyoshid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 11:13:34 by akyoshid          #+#    #+#             */
-/*   Updated: 2025/07/18 18:21:48 by akyoshid         ###   ########.fr       */
+/*   Updated: 2025/07/18 20:22:31 by akyoshid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,14 @@
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap()
-    : name("anonymous"), hit_points(10), energy_points(10), attack_damage(0) {
+    : name("anonymous"), hit_points(def_hit_points),
+        energy_points(def_energy_points), attack_damage(def_attack_damage) {
     std::cout << "ClapTrap: Default constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const std::string& name)
-    : name(name), hit_points(10), energy_points(10), attack_damage(0) {
+    : name(name), hit_points(def_hit_points),
+        energy_points(def_energy_points), attack_damage(def_attack_damage) {
     std::cout << "ClapTrap: String constructor called" << std::endl;
 }
 
@@ -49,7 +51,7 @@ void ClapTrap::attack(const std::string& target) {
     if (hit_points == 0) {
         std::cout
             << "ClapTrap: " << name
-            << " is destroyed and cannot attack!"
+            << " is already destroyed and cannot attack!"
             << std::endl;
     } else if (energy_points > 0) {
         energy_points--;
@@ -89,7 +91,7 @@ void ClapTrap::beRepaired(unsigned int amount) {
     if (hit_points == 0) {
         std::cout
             << "ClapTrap: " << name
-            << " is destroyed and cannot repair itself!"
+            << " is already destroyed and cannot repair itself!"
             << std::endl;
     } else if (energy_points > 0) {
         hit_points += amount;
