@@ -6,7 +6,7 @@
 /*   By: akyoshid <akyoshid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 11:13:42 by akyoshid          #+#    #+#             */
-/*   Updated: 2025/07/18 19:39:07 by akyoshid         ###   ########.fr       */
+/*   Updated: 2025/07/18 20:53:33 by akyoshid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main() {
     shin.takeDamage(30);
     houken.attack("Shin");
     shin.takeDamage(30);
-    for (int i = 0; i < 51; ++i)
+    for (unsigned int i = 0; i < ScavTrap::def_energy_points + 1; ++i)
         shin.beRepaired(1);
     shin.highFivesGuys();
     houken.highFivesGuys();

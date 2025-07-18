@@ -6,7 +6,7 @@
 /*   By: akyoshid <akyoshid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 18:25:04 by akyoshid          #+#    #+#             */
-/*   Updated: 2025/07/18 19:44:17 by akyoshid         ###   ########.fr       */
+/*   Updated: 2025/07/18 20:50:53 by akyoshid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,18 @@
 
 DiamondTrap::DiamondTrap()
     : ClapTrap(), ScavTrap(), FragTrap(), name("anonymous") {
-    hit_points = 100;
-    energy_points = 50;
-    attack_damage = 30;
+    hit_points = FragTrap::def_hit_points;
+    energy_points = ScavTrap::def_energy_points;
+    attack_damage = FragTrap::def_attack_damage;
     std::cout << "DiamondTrap: Default constructor called" << std::endl;
 }
 
 DiamondTrap::DiamondTrap(const std::string& name)
     : ClapTrap(name + "_clap_name"), ScavTrap(name + "_clap_name"),
         FragTrap(name + "_clap_name"), name(name) {
-    hit_points = 100;
-    energy_points = 50;
-    attack_damage = 30;
+    hit_points = FragTrap::def_hit_points;
+    energy_points = ScavTrap::def_energy_points;
+    attack_damage = FragTrap::def_attack_damage;
     std::cout << "DiamondTrap: String constructor called" << std::endl;
 }
 

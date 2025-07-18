@@ -6,12 +6,12 @@
 /*   By: akyoshid <akyoshid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 11:13:04 by akyoshid          #+#    #+#             */
-/*   Updated: 2025/07/18 18:24:14 by akyoshid         ###   ########.fr       */
+/*   Updated: 2025/07/18 20:45:13 by akyoshid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef EX03_CLAPTRAP_HPP_
-# define EX03_CLAPTRAP_HPP_
+#ifndef EX02_CLAPTRAP_HPP_
+# define EX02_CLAPTRAP_HPP_
 
 # include <string>
 
@@ -25,6 +25,9 @@ class ClapTrap {
     virtual void attack(const std::string& target);
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
+    static const unsigned int def_hit_points = 10;
+    static const unsigned int def_energy_points = 10;
+    static const unsigned int def_attack_damage = 0;
  protected:
     std::string name;
     unsigned int hit_points;

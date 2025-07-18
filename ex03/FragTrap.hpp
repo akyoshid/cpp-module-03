@@ -6,7 +6,7 @@
 /*   By: akyoshid <akyoshid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 17:39:41 by akyoshid          #+#    #+#             */
-/*   Updated: 2025/07/18 18:52:11 by akyoshid         ###   ########.fr       */
+/*   Updated: 2025/07/18 20:48:44 by akyoshid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@ class FragTrap : public virtual ClapTrap {
     ~FragTrap();
     void attack(const std::string& target);
     void highFivesGuys() const;
+    static const unsigned int def_hit_points = 100;
+    static const unsigned int def_energy_points = 100;
+    static const unsigned int def_attack_damage = 30;
 };
 
 #endif
