@@ -6,7 +6,7 @@
 /*   By: akyoshid <akyoshid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 13:04:32 by akyoshid          #+#    #+#             */
-/*   Updated: 2025/07/18 18:16:28 by akyoshid         ###   ########.fr       */
+/*   Updated: 2025/07/18 20:34:45 by akyoshid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap() : ClapTrap() {
-    hit_points = 100;
-    energy_points = 50;
-    attack_damage = 20;
+    hit_points = def_hit_points;
+    energy_points = def_energy_points;
+    attack_damage = def_attack_damage;
     std::cout << "ScavTrap: Default constructor called" << std::endl;
 }
 
 ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name) {
-    hit_points = 100;
-    energy_points = 50;
-    attack_damage = 20;
+    hit_points = def_hit_points;
+    energy_points = def_energy_points;
+    attack_damage = def_attack_damage;
     std::cout << "ScavTrap: String constructor called" << std::endl;
 }
 
@@ -47,7 +47,7 @@ void ScavTrap::attack(const std::string& target) {
     if (hit_points == 0) {
         std::cout
             << "ScavTrap: " << name
-            << " is destroyed and cannot attack!"
+            << " is already destroyed and cannot attack!"
             << std::endl;
     } else if (energy_points > 0) {
         energy_points--;
@@ -67,7 +67,7 @@ void ScavTrap::guardGate() const {
     if (hit_points == 0) {
         std::cout
             << "ScavTrap: " << name
-            << " is destroyed and cannot enter Gate keeper mode!"
+            << " is already destroyed and cannot enter Gate keeper mode!"
             << std::endl;
     } else {
         std::cout
