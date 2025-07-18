@@ -6,7 +6,7 @@
 /*   By: akyoshid <akyoshid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 18:25:04 by akyoshid          #+#    #+#             */
-/*   Updated: 2025/07/18 20:50:53 by akyoshid         ###   ########.fr       */
+/*   Updated: 2025/07/18 21:50:13 by akyoshid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 #include "DiamondTrap.hpp"
 
 DiamondTrap::DiamondTrap()
-    : ClapTrap(), ScavTrap(), FragTrap(), name("anonymous") {
+    : ClapTrap("anonymous_clap_name"),
+        ScavTrap(), FragTrap(), name("anonymous") {
     hit_points = FragTrap::def_hit_points;
     energy_points = ScavTrap::def_energy_points;
     attack_damage = FragTrap::def_attack_damage;
@@ -23,8 +24,8 @@ DiamondTrap::DiamondTrap()
 }
 
 DiamondTrap::DiamondTrap(const std::string& name)
-    : ClapTrap(name + "_clap_name"), ScavTrap(name + "_clap_name"),
-        FragTrap(name + "_clap_name"), name(name) {
+    : ClapTrap(name + "_clap_name"),
+        ScavTrap(), FragTrap(), name(name) {
     hit_points = FragTrap::def_hit_points;
     energy_points = ScavTrap::def_energy_points;
     attack_damage = FragTrap::def_attack_damage;
@@ -38,7 +39,6 @@ DiamondTrap::DiamondTrap(const DiamondTrap& src)
 
 DiamondTrap& DiamondTrap::operator=(const DiamondTrap& src) {
     if (this != &src) {
-        ClapTrap::operator=(src);
         ScavTrap::operator=(src);
         FragTrap::operator=(src);
         name = src.name;
