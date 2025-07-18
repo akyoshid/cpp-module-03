@@ -6,13 +6,14 @@
 /*   By: akyoshid <akyoshid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 13:04:22 by akyoshid          #+#    #+#             */
-/*   Updated: 2025/07/18 17:34:26 by akyoshid         ###   ########.fr       */
+/*   Updated: 2025/07/18 17:44:25 by akyoshid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef EX01_SCAVTRAP_HPP_
 # define EX01_SCAVTRAP_HPP_
 
+# include <string>
 # include "ClapTrap.hpp"
 
 class ScavTrap : public ClapTrap {

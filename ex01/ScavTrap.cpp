@@ -6,7 +6,7 @@
 /*   By: akyoshid <akyoshid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 13:04:32 by akyoshid          #+#    #+#             */
-/*   Updated: 2025/07/18 17:35:32 by akyoshid         ###   ########.fr       */
+/*   Updated: 2025/07/18 17:44:48 by akyoshid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name) {
     std::cout << "ScavTrap: String constructor called" << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap& src) : ClapTrap(src){
+ScavTrap::ScavTrap(const ScavTrap& src) : ClapTrap(src) {
     std::cout << "ScavTrap: Copy constructor called" << std::endl;
 }
 
@@ -67,7 +67,7 @@ void ScavTrap::attack(const std::string& target) {
     }
 }
 
-void ScavTrap::guardGate() const{
+void ScavTrap::guardGate() const {
     if (hit_points == 0) {
         std::cout
             << "ScavTrap: " << name
