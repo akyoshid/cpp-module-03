@@ -6,7 +6,7 @@
 /*   By: akyoshid <akyoshid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 17:40:31 by akyoshid          #+#    #+#             */
-/*   Updated: 2025/07/18 18:11:44 by akyoshid         ###   ########.fr       */
+/*   Updated: 2025/07/18 20:42:16 by akyoshid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 #include "FragTrap.hpp"
 
 FragTrap::FragTrap() : ClapTrap() {
-    hit_points = 100;
-    energy_points = 100;
-    attack_damage = 30;
+    hit_points = def_hit_points;
+    energy_points = def_energy_points;
+    attack_damage = def_attack_damage;
     std::cout << "FragTrap: Default constructor called" << std::endl;
 }
 
 FragTrap::FragTrap(const std::string& name) : ClapTrap(name) {
-    hit_points = 100;
-    energy_points = 100;
-    attack_damage = 30;
+    hit_points = def_hit_points;
+    energy_points = def_energy_points;
+    attack_damage = def_attack_damage;
     std::cout << "FragTrap: String constructor called" << std::endl;
 }
 
@@ -47,7 +47,7 @@ void FragTrap::attack(const std::string& target) {
     if (hit_points == 0) {
         std::cout
             << "FragTrap: " << name
-            << " is destroyed and cannot attack!"
+            << " is already destroyed and cannot attack!"
             << std::endl;
     } else if (energy_points > 0) {
         energy_points--;
