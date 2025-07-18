@@ -6,7 +6,7 @@
 /*   By: akyoshid <akyoshid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 11:13:34 by akyoshid          #+#    #+#             */
-/*   Updated: 2025/07/18 18:20:26 by akyoshid         ###   ########.fr       */
+/*   Updated: 2025/07/18 19:03:09 by akyoshid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap()
-    : name("anonymous"), hit_points(10), energy_points(10), attack_damage(0) {
+    : name("anonymous_clap_name"),
+        hit_points(10), energy_points(10), attack_damage(0) {
     std::cout << "ClapTrap: Default constructor called" << std::endl;
 }
 

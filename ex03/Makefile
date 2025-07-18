@@ -4,11 +4,13 @@ OBJ_DIR =	obj/
 
 INC = \
 			ClapTrap.hpp \
+			DiamondTrap.hpp \
 			FragTrap.hpp \
 			ScavTrap.hpp
 
 SRC = \
 			ClapTrap.cpp \
+			DiamondTrap.cpp \
 			FragTrap.cpp \
 			ScavTrap.cpp \
 			main.cpp

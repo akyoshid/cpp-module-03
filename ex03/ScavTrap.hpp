@@ -6,7 +6,7 @@
 /*   By: akyoshid <akyoshid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 13:04:22 by akyoshid          #+#    #+#             */
-/*   Updated: 2025/07/18 18:24:24 by akyoshid         ###   ########.fr       */
+/*   Updated: 2025/07/18 18:49:56 by akyoshid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <string>
 # include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap {
+class ScavTrap : public virtual ClapTrap {
  public:
     ScavTrap();
     explicit ScavTrap(const std::string& name);

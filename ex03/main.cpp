@@ -6,24 +6,23 @@
 /*   By: akyoshid <akyoshid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 11:13:42 by akyoshid          #+#    #+#             */
-/*   Updated: 2025/07/18 18:07:22 by akyoshid         ###   ########.fr       */
+/*   Updated: 2025/07/18 19:39:07 by akyoshid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main() {
-    FragTrap shin("Shin");
-    FragTrap houken("Houken");
-    ClapTrap *shin_p = &shin;
-    ClapTrap *houken_p = &houken;
+    DiamondTrap shin("Shin");
+    DiamondTrap houken("Houken");
+    shin.whoAmI();
+    houken.whoAmI();
     houken.attack("Shin");
     shin.takeDamage(30);
-    shin.beRepaired(30);
-    shin_p->attack("Houken");
-    houken_p->takeDamage(30);
-    houken_p->beRepaired(30);
+    houken.attack("Shin");
+    shin.takeDamage(30);
+    for (int i = 0; i < 51; ++i)
+        shin.beRepaired(1);
     shin.highFivesGuys();
     houken.highFivesGuys();
     return 0;
