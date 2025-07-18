@@ -3,10 +3,12 @@ NAME =		a.out
 OBJ_DIR =	obj/
 
 INC = \
-			ClapTrap.hpp
+			ClapTrap.hpp \
+			ScavTrap.hpp
 
 SRC = \
 			ClapTrap.cpp \
+			ScavTrap.cpp \
 			main.cpp
 
 OBJ =		$(patsubst %.cpp,$(OBJ_DIR)%.o,$(SRC))

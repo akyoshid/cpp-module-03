@@ -6,7 +6,7 @@
 /*   By: akyoshid <akyoshid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 11:13:04 by akyoshid          #+#    #+#             */
-/*   Updated: 2025/07/18 13:05:31 by akyoshid         ###   ########.fr       */
+/*   Updated: 2025/07/18 17:28:18 by akyoshid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ class ClapTrap {
     explicit ClapTrap(const std::string& name);
     ClapTrap(const ClapTrap& src);
     ClapTrap& operator=(const ClapTrap& src);
-    ~ClapTrap();
-    void attack(const std::string& target);
+    virtual ~ClapTrap();
+    virtual void attack(const std::string& target);
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
- private:
+ protected:
     std::string name;
     unsigned int hit_points;
     unsigned int energy_points;

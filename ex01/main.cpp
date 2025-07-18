@@ -6,44 +6,24 @@
 /*   By: akyoshid <akyoshid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 11:13:42 by akyoshid          #+#    #+#             */
-/*   Updated: 2025/07/18 13:00:50 by akyoshid         ###   ########.fr       */
+/*   Updated: 2025/07/18 17:29:04 by akyoshid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main() {
-    ClapTrap shin("Shin");
-    ClapTrap houken("Houken");
-    ClapTrap shin2(shin);
-    ClapTrap houken2;
-    houken2 = houken;
+    ScavTrap shin("Shin");
+    ScavTrap houken("Houken");
+    ClapTrap *shin_p = &shin;
     houken.attack("Shin");
     houken.attack("Shin");
     houken.attack("Shin");
     houken.attack("Shin");
-    houken.attack("Shin");
-    houken.attack("Shin");
-    houken.attack("Shin");
-    houken.attack("Shin");
-    houken.attack("Shin");
-    houken.attack("Shin");
-    houken.attack("Shin");
-    shin.takeDamage(10);
-    shin.takeDamage(1);
-    shin.beRepaired(10);
-    shin.attack("Houken");
-    shin2.takeDamage(9);
-    shin2.beRepaired(1);
-    shin2.beRepaired(1);
-    shin2.beRepaired(1);
-    shin2.beRepaired(1);
-    shin2.beRepaired(1);
-    shin2.beRepaired(1);
-    shin2.beRepaired(1);
-    shin2.beRepaired(1);
-    shin2.beRepaired(1);
-    shin2.beRepaired(1);
-    shin2.beRepaired(1);
+    shin.takeDamage(80);
+    shin.beRepaired(80);
+    houken.guardGate();
+    shin_p->attack("Houken");
     return 0;
 }
